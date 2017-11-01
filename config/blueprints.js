@@ -24,8 +24,7 @@
  */
 
 module.exports.blueprints = {
-
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Action routes speed up the backend development workflow by               *
   * eliminating the need to manually bind routes. When enabled, GET, POST,   *
@@ -42,11 +41,11 @@ module.exports.blueprints = {
   * inadvertently expose unsafe/unintentional controller logic to GET        *
   * requests.                                                                *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
-  // actions: true,
+  actions: false,
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * RESTful routes (`sails.config.blueprints.rest`)                          *
   *                                                                          *
@@ -67,11 +66,11 @@ module.exports.blueprints = {
   * in a production scenario, as long you take standard security precautions *
   * (combine w/ policies, etc.)                                              *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
-  // rest: true,
+  rest: false,
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Shortcut routes are simple helpers to provide access to a                *
   * controller's CRUD methods from your browser's URL bar. When enabled,     *
@@ -81,11 +80,11 @@ module.exports.blueprints = {
   * `shortcuts` are enabled by default, but should be disabled in            *
   * production.                                                              *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
-  // shortcuts: true,
+  shortcuts: false,
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * An optional mount path for all blueprint routes on a controller,         *
   * including `rest`, `actions`, and `shortcuts`. This allows you to take    *
@@ -95,22 +94,22 @@ module.exports.blueprints = {
   * (NOTE: This only applies to blueprint autoroutes, not manual routes from *
   * `sails.config.routes`)                                                   *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
   // prefix: '',
 
-  /***************************************************************************
+  /** *************************************************************************
    *                                                                          *
    * An optional mount path for all REST blueprint routes on a controller.    *
    * And it do not include `actions` and `shortcuts` routes.                  *
    * This allows you to take advantage of REST blueprint routing,             *
    * even if you need to namespace your RESTful API methods                   *
    *                                                                          *
-   ***************************************************************************/
+   ************************************************************************** */
 
   // restPrefix: '',
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Whether to pluralize controller names in blueprint routes.               *
   *                                                                          *
@@ -124,11 +123,11 @@ module.exports.blueprints = {
   * PUT /foos/:id?                                                           *
   * DELETE /foos/:id?                                                        *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
   // pluralize: false,
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Whether the blueprint controllers should populate model fetches with     *
   * data from other models which are linked by associations                  *
@@ -136,27 +135,26 @@ module.exports.blueprints = {
   * If you have a lot of data in one-to-many associations, leaving this on   *
   * may result in very heavy api calls                                       *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
   // populate: true,
 
-  /****************************************************************************
+  /** **************************************************************************
   *                                                                           *
   * Whether to run Model.watch() in the find and findOne blueprint actions.   *
   * Can be overridden on a per-model basis.                                   *
   *                                                                           *
-  ****************************************************************************/
+  *************************************************************************** */
 
   // autoWatch: true,
 
-  /****************************************************************************
+  /** **************************************************************************
   *                                                                           *
   * The default number of records to show in the response from a "find"       *
   * action. Doubles as the default size of populated arrays if populate is    *
   * true.                                                                     *
   *                                                                           *
-  ****************************************************************************/
+  *************************************************************************** */
 
   // defaultLimit: 30
-
 };
