@@ -21,8 +21,7 @@
  */
 
 module.exports.routes = {
-
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
   * etc. depending on your default view engine) your home page.              *
@@ -30,13 +29,11 @@ module.exports.routes = {
   * (Alternatively, remove this and add an `index.html` file in your         *
   * `assets` directory)                                                      *
   *                                                                          *
-  ***************************************************************************/
+  ************************************************************************** */
 
-  '/': {
-    view: 'homepage'
-  }
+  'get /': 'AppController.index',
 
-  /***************************************************************************
+  /** *************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
   *                                                                          *
@@ -44,6 +41,5 @@ module.exports.routes = {
   * is matched against Sails route blueprints. See `config/blueprints.js`    *
   * for configuration options and examples.                                  *
   *                                                                          *
-  ***************************************************************************/
-
+  ************************************************************************** */
 };
