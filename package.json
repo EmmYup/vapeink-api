@@ -9,7 +9,9 @@
   "author": "Emmanuel Yupit",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "include-all": "^1.0.0",
+    "jsonwebtoken": "^8.1.0",
     "rc": "1.0.1",
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9"
